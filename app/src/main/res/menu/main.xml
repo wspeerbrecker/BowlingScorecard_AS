@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.bowlingscorecard.MainActivity" >
+        
+    
+    
+    
+    
+
+    <item android:id="@+id/action_Data" android:title="Data &gt;">
+    	<menu>
+        	<item android:id="@+id/action_ExportData" android:title="Export Data"/>
+        	<item android:id="@+id/action_RestoreData" android:title="Restore Data"/>
+        	<item android:id="@+id/action_DeleteAllData" android:title="Delete All Data"/>
+    	</menu>
+    </item><item android:id="@+id/action_about" android:title="About" app:showAsAction="withText" android:orderInCategory="40"></item><item android:id="@+id/action_exit" android:title="Exit" app:showAsAction="withText" android:showAsAction="ifRoom|withText" android:orderInCategory="100">
+        
+    </item>
+
+</menu>
