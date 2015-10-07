@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class scoreStats extends Activity {
+public class xxxscoreStats extends Activity {
 
 	// Overall Statistics.
 	private int _iTotalNoOfGames = 0;

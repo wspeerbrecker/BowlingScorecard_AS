@@ -1,11 +1,12 @@
 package com.infoshare.bowlingscorecard;
 
-import android.content.AsyncTaskLoader;
+//import android.content.AsyncTaskLoader;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.BaseColumns;
+import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.List;
 /**
  * Created by wspeerbrecker on 2015-09-30.
  */
-public class ScorecardListLoader extends AsyncTaskLoader<List<Scorecard>>{
+public class ScorecardListLoader extends AsyncTaskLoader<List<Scorecard>> {
     private static final String LOG_TAG=ScorecardListLoader.class.getSimpleName();
     private List<Scorecard> mScorecard;
     private ContentResolver mContentResolver;
@@ -27,13 +28,14 @@ public class ScorecardListLoader extends AsyncTaskLoader<List<Scorecard>>{
 
     @Override
     public List<Scorecard> loadInBackground() {
+
         String[] projection = {BaseColumns._ID, BowlingContract.ScorecardColumns.SCORECARD_SEASONID, BowlingContract.ScorecardColumns.SCORECARD_BOWLING_DATE,
                 BowlingContract.ScorecardColumns.SCORECARD_GAME1, BowlingContract.ScorecardColumns.SCORECARD_GAME2, BowlingContract.ScorecardColumns.SCORECARD_GAME3,
                 BowlingContract.ScorecardColumns.SCORECARD_TOTAL, BowlingContract.ScorecardColumns.SCORECARD_AVERAGE
         };
         List<Scorecard> entries = new ArrayList<Scorecard>();
 
-        mCursor = mContentResolver.query(BowlingContract.URI_TABLE, projection, null, null, null);
+        mCursor = mContentResolver.query(BowlingContract.URI_TABLE, projection, null, null, BowlingContract.ScorecardColumns.SCORECARD_BOWLING_DATE);
         if (mCursor != null) {
             if (mCursor.moveToFirst()){
                 do {

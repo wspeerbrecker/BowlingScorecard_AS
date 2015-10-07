@@ -1172,7 +1172,7 @@ containing a value of this type.
         public static final int dim_foreground_disabled_material_light=0x7f0a0013;
         public static final int dim_foreground_material_dark=0x7f0a0014;
         public static final int dim_foreground_material_light=0x7f0a0015;
-        public static final int editColor=0x7f0a0016;
+        public static final int editsColor=0x7f0a0016;
         public static final int highlighted_text_material_dark=0x7f0a0017;
         public static final int highlighted_text_material_light=0x7f0a0018;
         public static final int hint_foreground_material_dark=0x7f0a0019;
@@ -1248,6 +1248,9 @@ containing a value of this type.
         public static final int dialog_fixed_width_minor=0x7f07000a;
         public static final int disabled_alpha_material_dark=0x7f07002b;
         public static final int disabled_alpha_material_light=0x7f07002c;
+        public static final int entryText_size=0x7f07002d;
+        public static final int labelText_size=0x7f07002e;
+        public static final int popup_message_size=0x7f07002f;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -1319,11 +1322,11 @@ containing a value of this type.
     public static final class id {
         public static final int Row1=0x7f0b0042;
         public static final int Row2=0x7f0b0043;
-        public static final int action_Data=0x7f0b0071;
-        public static final int action_DeleteAllData=0x7f0b0074;
-        public static final int action_ExportData=0x7f0b0072;
-        public static final int action_RestoreData=0x7f0b0073;
-        public static final int action_about=0x7f0b0075;
+        public static final int action_Data=0x7f0b0073;
+        public static final int action_DeleteAllData=0x7f0b0076;
+        public static final int action_ExportData=0x7f0b0074;
+        public static final int action_RestoreData=0x7f0b0075;
+        public static final int action_about=0x7f0b0077;
         public static final int action_bar=0x7f0b0031;
         public static final int action_bar_activity_content=0x7f0b0000;
         public static final int action_bar_container=0x7f0b0030;
@@ -1332,7 +1335,7 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0b001f;
         public static final int action_bar_title=0x7f0b001e;
         public static final int action_context_bar=0x7f0b0032;
-        public static final int action_exit=0x7f0b0076;
+        public static final int action_exit=0x7f0b0078;
         public static final int action_menu_divider=0x7f0b0002;
         public static final int action_menu_presenter=0x7f0b0003;
         public static final int action_mode_bar=0x7f0b002e;
@@ -1355,9 +1358,9 @@ containing a value of this type.
         public static final int editTextScore3=0x7f0b0068;
         public static final int edit_query=0x7f0b0033;
         public static final int end=0x7f0b0014;
-        public static final int etBowlersName=0x7f0b0055;
-        public static final int etLeagueName=0x7f0b0051;
-        public static final int etLeagueSeason=0x7f0b0053;
+        public static final int etBowlersName=0x7f0b0057;
+        public static final int etLeagueName=0x7f0b0053;
+        public static final int etLeagueSeason=0x7f0b0055;
         public static final int expand_activities_button=0x7f0b0022;
         public static final int expanded_menu=0x7f0b0028;
         public static final int home=0x7f0b0004;
@@ -1372,6 +1375,7 @@ containing a value of this type.
         public static final int never=0x7f0b0019;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;
+        public static final int popup_message=0x7f0b006e;
         public static final int progress_circular=0x7f0b0005;
         public static final int progress_horizontal=0x7f0b0006;
         public static final int radio=0x7f0b002b;
@@ -1402,31 +1406,32 @@ containing a value of this type.
         public static final int textView3=0x7f0b005a;
         public static final int textView4=0x7f0b005c;
         public static final int title=0x7f0b0027;
-        public static final int tvAbout=0x7f0b0057;
+        public static final int tvAbout=0x7f0b0050;
         public static final int tvAverage=0x7f0b006b;
         public static final int tvAverageValue=0x7f0b006c;
-        public static final int tvAvg=0x7f0b006f;
+        public static final int tvAvg=0x7f0b0071;
         public static final int tvBDate=0x7f0b0061;
         public static final int tvBName=0x7f0b0060;
-        public static final int tvBowlersName=0x7f0b0054;
+        public static final int tvBowlersName=0x7f0b0056;
         public static final int tvCancelBtn=0x7f0b005e;
-        public static final int tvDate=0x7f0b006d;
+        public static final int tvDate=0x7f0b006f;
+        public static final int tvDeleteBtn=0x7f0b006d;
         public static final int tvHighGame=0x7f0b004b;
         public static final int tvHighTriple=0x7f0b004c;
-        public static final int tvLeagueName=0x7f0b0050;
-        public static final int tvLeagueSeason=0x7f0b0052;
+        public static final int tvLeagueName=0x7f0b0052;
+        public static final int tvLeagueSeason=0x7f0b0054;
         public static final int tvLowGame=0x7f0b004d;
         public static final int tvLowTriple=0x7f0b004e;
         public static final int tvSaveBtn=0x7f0b005f;
-        public static final int tvSavePref=0x7f0b0056;
+        public static final int tvSavePref=0x7f0b0051;
         public static final int tvScore1=0x7f0b0063;
         public static final int tvScore2=0x7f0b0065;
         public static final int tvScore3=0x7f0b0067;
         public static final int tvSeasonAverage=0x7f0b004a;
-        public static final int tvSeasonAvg=0x7f0b0070;
+        public static final int tvSeasonAvg=0x7f0b0072;
         public static final int tvSeasonTotal=0x7f0b0049;
         public static final int tvStatistics=0x7f0b0046;
-        public static final int tvTot=0x7f0b006e;
+        public static final int tvTot=0x7f0b0070;
         public static final int tvTotal1=0x7f0b0069;
         public static final int tvTotalBowlingSessions=0x7f0b0047;
         public static final int tvTotalGames=0x7f0b0048;
@@ -1466,9 +1471,10 @@ containing a value of this type.
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_main=0x7f030017;
         public static final int activity_splash=0x7f030018;
-        public static final int add_score_layout=0x7f030019;
-        public static final int score_layout=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
+        public static final int addedit_scorecard_layout=0x7f030019;
+        public static final int popup_layout=0x7f03001a;
+        public static final int scorecard_list_layout=0x7f03001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

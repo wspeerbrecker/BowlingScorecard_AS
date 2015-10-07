@@ -73,17 +73,18 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="60dp"
                     android:orientation="vertical" >
 
                      <TextView
                          android:id="@+id/tvStatistics"
-                         android:layout_width="wrap_content"
+                         android:layout_width="fill_parent"
                          android:layout_height="wrap_content"
                          android:layout_marginTop="10dp"
                          android:gravity="center_horizontal"
                          android:text="Overall Statistics"
-                         android:textAppearance="?android:attr/textAppearanceSmall" />
+                         android:textColor="#000000"
+                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
                     <TextView
                         android:id="@+id/tvTotalBowlingSessions"
@@ -165,6 +166,33 @@
                     android:layout_marginTop="50dp"
                     android:orientation="vertical" >
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/tvAbout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="About"
+                            android:textColor="#231CFF"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/tvSavePref"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="Save"
+                            android:textColor="#231CFF"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+
                     <TextView
                         android:id="@+id/tvLeagueName"
                         android:layout_width="wrap_content"
@@ -212,34 +240,9 @@
                         android:id="@+id/etBowlersName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:hint="Enter Bowler's Name"
                         android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
-
-                        <TextView
-                            android:id="@+id/tvSavePref"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Save"
-                            android:textColor="#231CFF"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                        <TextView
-                            android:id="@+id/tvAbout"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:text="About"
-                            android:textColor="#231CFF"
-                            android:layout_weight="1"
-                            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
             </FrameLayout>
@@ -253,7 +256,7 @@
         android:layout_marginLeft="30dp"
         android:layout_alignRight="@+id/tabhost"
         android:paddingTop="1dp"
-        android:background="@android:drawable/ic_input_add"
+        android:background="@android:drawable/ic_menu_add"
         android:layout_alignTop="@+id/tabhost"
         android:minHeight="20dp"
         android:minWidth="20dp" />

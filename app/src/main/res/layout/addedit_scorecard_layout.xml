@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="&lt; Back"
+            android:text="Cancel"
             android:textColor="#231CFF"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
@@ -58,7 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Date" 
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:onClick="showDatePickerDialog"/>
 
     <LinearLayout
@@ -96,7 +97,7 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             >
 
             <TextView
@@ -119,7 +120,7 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             >
 
             <TextView
@@ -142,7 +143,10 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        >
 
         <TextView
             android:id="@+id/tvTotal1"
@@ -156,22 +160,17 @@
             android:id="@+id/tvTotalValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="30dp"
             android:text="TotalValue"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
-    
-    </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+
     
         <TextView
             android:id="@+id/tvAverage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Average:"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
@@ -180,12 +179,23 @@
             android:id="@+id/tvAverageValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
             android:text="AverageValue"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
     
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tvDeleteBtn"
+        android:text="Delete"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#231CFF"
+         />
 
 </LinearLayout>

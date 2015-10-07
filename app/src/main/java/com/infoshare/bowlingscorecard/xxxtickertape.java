@@ -9,7 +9,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;  
 import android.widget.RelativeLayout;
 
-public class tickertape extends HorizontalScrollView {  
+public class xxxtickertape extends HorizontalScrollView {
        
      private LinearLayout tickertape;  
      private int scrollMax;  
@@ -34,7 +34,7 @@ public class tickertape extends HorizontalScrollView {
       * CONSTRUCTOR  
       * @param context  
       */  
-     public tickertape(Context context) {  
+     public xxxtickertape(Context context) {
           super(context);  
             
           //SET PROPS  

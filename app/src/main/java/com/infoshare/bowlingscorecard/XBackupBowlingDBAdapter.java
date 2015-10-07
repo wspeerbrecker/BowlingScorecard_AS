@@ -14,13 +14,13 @@ import android.util.Log;
 // TO USE:
 // Change the package (at top) to match your project.
 // Search for "TODO", and make the appropriate changes.
-public class BowlingDBAdapter {
+public class XBackupBowlingDBAdapter {
 
 	/////////////////////////////////////////////////////////////////////
 	//	Constants & Data
 	/////////////////////////////////////////////////////////////////////
 	// For logging:
-	private static final String TAG = BowlingDBAdapter.class.getSimpleName();
+	private static final String TAG = XBackupBowlingDBAdapter.class.getSimpleName();
 			// "BowlingDBAdapter";
 	
 	// DB Fields
@@ -85,13 +85,13 @@ public class BowlingDBAdapter {
 	//	Public methods:
 	/////////////////////////////////////////////////////////////////////
 	
-	public BowlingDBAdapter(Context ctx) {
+	public XBackupBowlingDBAdapter(Context ctx) {
 		this.context = ctx;
 		myDBHelper = new DatabaseHelper(context);
 	}
 	
 	// Open the database connection.
-	public BowlingDBAdapter open() {
+	public XBackupBowlingDBAdapter open() {
 		db = myDBHelper.getWritableDatabase();
 		return this;
 	}

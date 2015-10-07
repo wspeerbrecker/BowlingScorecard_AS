@@ -14,7 +14,7 @@ import java.util.zip.Inflater;
 /**
  * Created by wspeerbrecker on 2015-09-16.
  */
-public class CustomSimpleCursorAdapter extends SimpleCursorAdapter {
+public class XBackupCustomSimpleCursorAdapter extends SimpleCursorAdapter {
 
     private Context mContext;
     private Context appContext;
@@ -24,7 +24,7 @@ public class CustomSimpleCursorAdapter extends SimpleCursorAdapter {
     private ArrayList<Integer> alRollingAvg;
     public static int _iTotalScores = 0;
 
-    public CustomSimpleCursorAdapter(Context context,int layout, Cursor c,String[] from,
+    public XBackupCustomSimpleCursorAdapter(Context context,int layout, Cursor c,String[] from,
                                      int[] to, ArrayList<Integer> alRollAvg ) {
         super(context,layout,c,from,to);
         this.layout=layout;
@@ -48,32 +48,24 @@ public class CustomSimpleCursorAdapter extends SimpleCursorAdapter {
             view = inflater.inflate(layout, null);
         }
         //
-        String sDate = cr.getString(BowlingDBAdapter.COL_BOWLING_DATE);
+        String sDate = cr.getString(XBackupBowlingDBAdapter.COL_BOWLING_DATE);
         TextView tvDate = (TextView) view.findViewById(R.id.tvDate);
         tvDate.setText(sDate);
         //
-        String sTotalScore = cr.getString(BowlingDBAdapter.COL_TOTAL);
-        int iSeriesScore = cr.getInt(BowlingDBAdapter.COL_TOTAL);
+        String sTotalScore = cr.getString(XBackupBowlingDBAdapter.COL_TOTAL);
+        int iSeriesScore = cr.getInt(XBackupBowlingDBAdapter.COL_TOTAL);
         _iTotalScores += 1; //iSeriesScore;
         TextView tvTotslScores = (TextView) view.findViewById(R.id.tvTot);
         tvTotslScores.setText("Total: " + sTotalScore);
         //
-        String sAvg = cr.getString(BowlingDBAdapter.COL_AVERAGE);
+        String sAvg = cr.getString(XBackupBowlingDBAdapter.COL_AVERAGE);
         TextView tvAvg = (TextView) view.findViewById(R.id.tvAvg);
         tvAvg.setText("Avg: " + sAvg);
         //
         TextView tvSeasonAvg1 = (TextView) view.findViewById(R.id.tvSeasonAvg);
         Integer iPos = cursor.getPosition();
-        tvSeasonAvg1.setText("Season Avg: " + alRollingAvg.get(iPos));
+//        tvSeasonAvg1.setText("Season Avg: " + alRollingAvg.get(iPos));
         //
     }
-
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//
-//        //super.getView(position, convertView, parent);
-//        //
-//
-//    }
 
 }

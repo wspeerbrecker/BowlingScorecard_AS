@@ -13,6 +13,7 @@ public class Scorecard {
     private String Game3;
     private String SeriesTotal;
     private String SeriesAverage;
+    private String SeasonAverage;
 
     public Scorecard ( int _id, String SeasonId, String BowlingDate, String Game1, String Game2,
                         String Game3, String SeriesTotal, String SeriesAverage)
@@ -26,6 +27,7 @@ public class Scorecard {
         this.Game3 = Game3;
         this.SeriesTotal = SeriesTotal;
         this.SeriesAverage = SeriesAverage;
+        this.SeasonAverage = SeasonAverage;
     }
 
     public int getid() {
@@ -92,5 +94,12 @@ public class Scorecard {
         SeriesAverage = seriesAverage;
     }
 
+    public String getSeasonAverage() {
+        return SeasonAverage;
+    }
+
+    public void setSeasonAverage(String seasonAverage) {
+        SeasonAverage = seasonAverage;
+    }
 }
 
