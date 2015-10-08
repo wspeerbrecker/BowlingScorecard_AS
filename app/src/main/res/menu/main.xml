@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.bowlingscorecard.MainActivity" >
 
-    <item android:id="@+id/addBtn"
+    <item android:id="@+id/action_AddScorecard"
         android:title="Add"
-        android:icon="@android:drawable/ic_input_add"
+        android:icon="@android:drawable/ic_menu_add"
         app:showAsAction="always"></item>
 
     <item android:id="@+id/action_Data" android:title="Data &gt;">
@@ -14,7 +14,8 @@
         	<item android:id="@+id/action_RestoreData" android:title="Restore Data"/>
         	<item android:id="@+id/action_DeleteAllData" android:title="Delete All Data"/>
     	</menu>
-    </item><item android:id="@+id/action_about" android:title="About" app:showAsAction="withText" android:orderInCategory="40"></item><item android:id="@+id/action_exit" android:title="Exit" app:showAsAction="withText" android:showAsAction="ifRoom|withText" android:orderInCategory="100">
+    </item><item android:id="@+id/action_about" android:title="About" app:showAsAction="withText" android:orderInCategory="40"></item>
+    <item android:id="@+id/action_exit" android:title="Exit" app:showAsAction="withText" android:orderInCategory="100">
         
     </item>
 

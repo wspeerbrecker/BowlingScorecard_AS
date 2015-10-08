@@ -35,7 +35,7 @@ public class ScorecardListLoader extends AsyncTaskLoader<List<Scorecard>> {
         };
         List<Scorecard> entries = new ArrayList<Scorecard>();
 
-        mCursor = mContentResolver.query(BowlingContract.URI_TABLE, projection, null, null, BowlingContract.ScorecardColumns.SCORECARD_BOWLING_DATE);
+        mCursor = mContentResolver.query(BowlingContract.URI_TABLE, projection, null, null, BowlingContract.ScorecardColumns.SCORECARD_BOWLING_DATE + " DESC");
         if (mCursor != null) {
             if (mCursor.moveToFirst()){
                 do {

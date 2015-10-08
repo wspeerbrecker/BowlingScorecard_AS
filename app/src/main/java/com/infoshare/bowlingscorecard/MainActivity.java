@@ -121,7 +121,7 @@ public class MainActivity extends ActionBarActivity
         ListView myList = (ListView) findViewById(R.id.lvScores);
         myList.setAdapter(mAdapter);
         //
-        registertClickAddButton();
+        //registertClickAddButton();
         registerOnClickListView();
         registertClickSavePrefLabel();
         registertClickSettingsAboutLabel();
@@ -197,20 +197,20 @@ public class MainActivity extends ActionBarActivity
 
     }
 
-    private void registertClickAddButton() {
-
-        Button btn = (Button) findViewById(R.id.btnAdd);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                onClick_AddRecord();
-
-            }
-        });
-    }
+//    private void registertClickAddButton() {
+//
+//        Button btn = (Button) findViewById(R.id.btnAdd);
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//                onClick_AddRecord();
+//
+//            }
+//        });
+//    }
 
     private void registertClickSavePrefLabel() {
 
@@ -268,6 +268,10 @@ public class MainActivity extends ActionBarActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        if (id == R.id.action_AddScorecard) {
+            onClick_AddRecord();
+            return true;
+        }
         sCSVFilename = "MyBowlingScorecard.csv";
         if (id == R.id.action_ExportData) {
 
@@ -448,18 +452,19 @@ public class MainActivity extends ActionBarActivity
     }
 
     private void calculateStats() {
+
         //
-        // Store the total number of bowling sessions.
-        _iTotalBowlingSessions = mScorecard.size();
-        _iTotalNoOfGames = 0;
-        int iTotalScore = 0;
-        //
-        if (mScorecard != null) {
+        if (mScorecard.size() != 0) {
+            //
+            // Store the total number of bowling sessions.
+            _iTotalBowlingSessions = mScorecard.size();
+            _iTotalNoOfGames = 0;
+            int iTotalScore = 0;
             for (Scorecard scorecard : mScorecard) {
-                String sDate =  scorecard.getBowlingDate();
+                String sDate = scorecard.getBowlingDate();
                 //
                 // Determine the Highest Game
-                int iGame1 =  Integer.parseInt(scorecard.getGame1());
+                int iGame1 = Integer.parseInt(scorecard.getGame1());
                 if (iGame1 != 0) {
                     _iTotalNoOfGames += 1;
                 }
@@ -603,10 +608,14 @@ public class MainActivity extends ActionBarActivity
         int iTotalScores = 0;
 
         if (mScorecard != null) {
-            for (Scorecard scorecard : mScorecard) {
-                iTotalGames += 3;
+            // Reverse iterate thru list from bottom to top of list.
+            for (int iRowIdx = mScorecard.size() - 1; iRowIdx >= 0; iRowIdx--) {
+
+                Scorecard scorecard = mScorecard.get(iRowIdx);
                 //
-                long lRowID = 0; //cursor.getLong(BowlingDBAdapter.COL_ROWID);
+                if (scorecard.getGame1() != "") { iTotalGames += 1; }
+                if (scorecard.getGame2() != "") { iTotalGames += 1; }
+                if (scorecard.getGame3() != "") { iTotalGames += 1; }
                 iTotalScores += Integer.parseInt(scorecard.getSeriesTotal());
                 int iSeasonAverage = iTotalScores / iTotalGames;
                 //

@@ -249,16 +249,4 @@
 
     </TabHost>
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_alignRight="@+id/tabhost"
-        android:paddingTop="1dp"
-        android:background="@android:drawable/ic_menu_add"
-        android:layout_alignTop="@+id/tabhost"
-        android:minHeight="20dp"
-        android:minWidth="20dp" />
-
 </RelativeLayout>
