@@ -1322,11 +1322,11 @@ containing a value of this type.
     public static final class id {
         public static final int Row1=0x7f0b0042;
         public static final int Row2=0x7f0b0043;
-        public static final int action_Data=0x7f0b0073;
-        public static final int action_DeleteAllData=0x7f0b0076;
-        public static final int action_ExportData=0x7f0b0074;
-        public static final int action_RestoreData=0x7f0b0075;
-        public static final int action_about=0x7f0b0077;
+        public static final int action_Data=0x7f0b0074;
+        public static final int action_DeleteAllData=0x7f0b0077;
+        public static final int action_ExportData=0x7f0b0075;
+        public static final int action_RestoreData=0x7f0b0076;
+        public static final int action_about=0x7f0b0078;
         public static final int action_bar=0x7f0b0031;
         public static final int action_bar_activity_content=0x7f0b0000;
         public static final int action_bar_container=0x7f0b0030;
@@ -1335,13 +1335,14 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0b001f;
         public static final int action_bar_title=0x7f0b001e;
         public static final int action_context_bar=0x7f0b0032;
-        public static final int action_exit=0x7f0b0078;
+        public static final int action_exit=0x7f0b0079;
         public static final int action_menu_divider=0x7f0b0002;
         public static final int action_menu_presenter=0x7f0b0003;
         public static final int action_mode_bar=0x7f0b002e;
         public static final int action_mode_bar_stub=0x7f0b002d;
         public static final int action_mode_close_button=0x7f0b0020;
         public static final int activity_chooser_view_content=0x7f0b0021;
+        public static final int addBtn=0x7f0b0073;
         public static final int always=0x7f0b0016;
         public static final int beginning=0x7f0b0013;
         public static final int btnAdd=0x7f0b0058;
